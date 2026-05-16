@@ -34,14 +34,14 @@ body::before{content:’’;position:fixed;inset:0;opacity:.025;background-image
 nav{position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(8,8,8,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(–bdr);}
 .logo{display:flex;align-items:center;gap:9px;text-decoration:none;}
 .logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(–gold),var(–gold-d));border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:‘Syne’,sans-serif;font-weight:800;font-size:.85rem;color:var(–dark);}
-.logo-text{font-family:‘Syne’,sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:-.02em;color:var(–white);}
+.logo-text{font-family:‘Syne’,sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:-.02em;color:var(–white);text-decoration:none;}
 .logo-text span{color:var(–gold);}
 .nav-center{display:flex;gap:2px;}
 .nav-link{padding:6px 12px;border-radius:8px;font-size:.82rem;font-weight:500;color:var(–muted2);cursor:pointer;transition:all .2s;white-space:nowrap;}
 .nav-link:hover{color:var(–white);background:var(–d3);}
-.nav-link.active{color:var(–white);}
+.nav-link.active{color:var(–white) !important;font-weight:600;}
 .nav-r{display:flex;gap:8px;align-items:center;}
-.nav-rate{display:flex;align-items:center;gap:6px;padding:5px 10px;background:var(–d3);border:1px solid var(–bdr);border-radius:8px;font-size:.76rem;}
+.nav-rate{display:flex;align-items:center;gap:6px;padding:5px 10px;background:var(–d3);border:1px solid rgba(212,168,67,.2);border-radius:8px;font-size:.76rem;}
 .rate-dot{width:6px;height:6px;border-radius:50%;background:var(–green);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
 .btn-login{padding:6px 14px;background:transparent;border:1px solid var(–bdr);border-radius:8px;color:var(–muted2);font-family:‘Space Grotesk’,sans-serif;font-size:.8rem;cursor:pointer;transition:all .2s;}
@@ -69,9 +69,9 @@ nav{position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:cente
 .hero h1 .highlight{background:linear-gradient(135deg,var(–gold),var(–gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .hero-sub{color:var(–muted2);font-size:.95rem;max-width:420px;margin:0 auto 28px;line-height:1.7;}
 .hero-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;}
-.btn-primary{padding:13px 26px;background:var(–gold);color:var(–dark);border:none;border-radius:var(–radius);font-family:‘Space Grotesk’,sans-serif;font-weight:700;font-size:.9rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:7px;}
+.btn-primary{padding:13px 26px;background:var(–gold) !important;color:#080808 !important;border:none;border-radius:var(–radius);font-family:‘Space Grotesk’,sans-serif;font-weight:700;font-size:.9rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:7px;text-decoration:none !important;-webkit-text-fill-color:#080808 !important;}
 .btn-primary:hover{background:var(–gold-l);transform:translateY(-1px);box-shadow:0 8px 24px rgba(212,168,67,.25);}
-.btn-secondary{padding:13px 26px;background:transparent;color:var(–white);border:1px solid var(–bdr3);border-radius:var(–radius);font-family:‘Space Grotesk’,sans-serif;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;}
+.btn-secondary{padding:13px 26px;background:transparent;color:var(–white) !important;border:1px solid rgba(255,255,255,.15);border-radius:var(–radius);font-family:‘Space Grotesk’,sans-serif;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;text-decoration:none !important;}
 .btn-secondary:hover{border-color:rgba(212,168,67,.3);color:var(–gold);}
 
 /* STATS */
@@ -85,7 +85,7 @@ nav{position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:cente
 .trade-wrap{position:relative;z-index:1;padding:0 16px 24px;max-width:480px;margin:0 auto;}
 
 /* RATE CARD */
-.rate-card{background:var(–d2);border:1px solid var(–bdr);border-radius:var(–radius-lg);padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;}
+.rate-card{background:#141414;border:1px solid rgba(212,168,67,.2);border-radius:18px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;}
 .rc-left{display:flex;align-items:center;gap:10px;}
 .rc-icon{width:36px;height:36px;background:linear-gradient(135deg,#26A17B,#1a7a5a);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;color:#fff;flex-shrink:0;}
 .rc-name{font-weight:700;font-size:.9rem;}
@@ -95,7 +95,7 @@ nav{position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:cente
 .rc-sub{font-size:.68rem;color:var(–muted);margin-top:2px;}
 
 /* PANEL */
-.panel{background:var(–d2);border:1px solid var(–bdr);border-radius:var(–radius-xl);overflow:hidden;}
+.panel{background:#141414;border:1px solid rgba(212,168,67,.15);border-radius:22px;overflow:hidden;}
 .ptabs{display:flex;border-bottom:1px solid var(–bdr2);}
 .ptab{flex:1;padding:14px;text-align:center;font-size:.85rem;font-weight:600;cursor:pointer;color:var(–muted);background:transparent;border:none;font-family:‘Space Grotesk’,sans-serif;border-bottom:2px solid transparent;transition:all .2s;}
 .ptab.buy.active{color:var(–green);border-bottom-color:var(–green);background:rgba(0,192,118,.04);}
@@ -147,9 +147,9 @@ nav{position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:cente
 .pct:hover{color:var(–gold);border-color:rgba(212,168,67,.3);}
 
 /* ACTION BUTTONS */
-.btn-buy{width:100%;padding:14px;background:linear-gradient(135deg,var(–green),var(–green-d));color:#fff;border:none;border-radius:var(–radius);font-family:‘Syne’,sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .2s;letter-spacing:.01em;}
+.btn-buy{width:100%;padding:14px;background:#00C076;color:#fff !important;border:none;border-radius:12px;font-family:‘Syne’,sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .2s;letter-spacing:.01em;}
 .btn-buy:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,192,118,.25);}
-.btn-sell-action{width:100%;padding:14px;background:linear-gradient(135deg,var(–red),var(–red-d));color:#fff;border:none;border-radius:var(–radius);font-family:‘Syne’,sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .2s;letter-spacing:.01em;}
+.btn-sell-action{width:100%;padding:14px;background:#F6465D;color:#fff !important;border:none;border-radius:12px;font-family:‘Syne’,sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .2s;letter-spacing:.01em;}
 .btn-sell-action:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(246,70,93,.25);}
 .pay-note{margin-top:9px;text-align:center;font-size:.68rem;color:var(–muted);}
 
@@ -180,7 +180,7 @@ nav{position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:cente
 /* ── AUTH MODAL ── */
 .auth-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(16px);z-index:700;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;}
 .auth-overlay.open{opacity:1;pointer-events:all;}
-.auth-sheet{background:var(–d1);border:1px solid var(–bdr);border-radius:var(–radius-xl) var(–radius-xl) 0 0;width:100%;max-width:480px;max-height:92vh;overflow-y:auto;transform:translateY(100%);transition:transform .3s cubic-bezier(.34,1.56,.64,1);}
+.auth-sheet{background:#0F0F0F;border:1px solid rgba(212,168,67,.2);border-radius:22px 22px 0 0;width:100%;max-width:480px;max-height:92vh;overflow-y:auto;transform:translateY(100%);transition:transform .3s cubic-bezier(.34,1.56,.64,1);}
 .auth-overlay.open .auth-sheet{transform:translateY(0);}
 .auth-header{padding:16px 20px 14px;border-bottom:1px solid var(–bdr2);display:flex;justify-content:space-between;align-items:center;}
 .auth-title{font-family:‘Syne’,sans-serif;font-weight:800;font-size:1rem;}
@@ -226,12 +226,12 @@ nav{position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:cente
 .fd{font-size:.7rem;color:var(–muted);line-height:1.55;}
 
 /* ── BOTTOM NAV ── */
-.bnav{position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(8,8,8,.97);backdrop-filter:blur(20px);border-top:1px solid var(–bdr2);display:flex;padding:8px 0 20px;}
+.bnav{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#080808;border-top:1px solid rgba(212,168,67,.1);display:flex;padding:8px 0 20px;}
 .bni{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;color:var(–muted);font-size:.58rem;font-weight:500;padding:3px 0;transition:color .2s;}
 .bni.active{color:var(–gold);}
 .bni svg{width:20px;height:20px;}
 .bni-c{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;}
-.bni-trade{width:46px;height:46px;background:linear-gradient(135deg,var(–gold),var(–gold-d));border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:-18px;box-shadow:0 4px 18px rgba(212,168,67,.4);font-size:18px;color:var(–dark);}
+.bni-trade{width:46px;height:46px;background:#D4A843;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:-18px;box-shadow:0 4px 18px rgba(212,168,67,.5);font-size:18px;color:#080808;font-weight:900;}
 
 /* ── TOAST ── */
 .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);padding:10px 20px;border-radius:100px;font-family:‘Space Grotesk’,sans-serif;font-weight:600;font-size:.82rem;z-index:900;box-shadow:0 4px 20px rgba(0,0,0,.5);white-space:nowrap;display:none;max-width:90vw;text-align:center;}
@@ -252,7 +252,7 @@ nav{position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:cente
 <nav>
   <a class="logo" href="#">
     <div class="logo-mark">SX</div>
-    <span class="logo-text">Swift<span>X</span></span>
+    <span class="logo-text">Swift<span style="color:var(--gold);">X</span></span>
   </a>
   <div class="nav-center">
     <div class="nav-link active" onclick="document.getElementById('tradeSection').scrollIntoView({behavior:'smooth'})">Trader</div>
@@ -348,8 +348,8 @@ nav{position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:cente
 <!-- HERO -->
 
 <section class="hero">
-  <div class="hero-badge"><div class="hero-badge-dot"></div>Plateforme USDT TRC20 · Afrique de l'Ouest</div>
-  <h1>Échange <span class="highlight">USDT TRC20</span><br>en toute sécurité</h1>
+  <div class="hero-badge"><span style="width:5px;height:5px;border-radius:50%;background:#00C076;display:inline-block;margin-right:4px;animation:pulse 2s infinite;"></span>Plateforme USDT TRC20 · Afrique de l'Ouest</div>
+  <h1>Échange <span style="color:var(--gold);">USDT TRC20</span><br>en toute sécurité</h1>
   <p class="hero-sub">Achetez et vendez du USDT TRC20 instantanément via Mobile Money — Moov Money & MTN MoMo dans 10 pays.</p>
   <div class="hero-cta">
     <button class="btn-primary" onclick="document.getElementById('tradeSection').scrollIntoView({behavior:'smooth'})">
