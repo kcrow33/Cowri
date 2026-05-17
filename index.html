@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{font-family:'Space Grotesk',sans-serif;background:#080808;color:#FFFFFF;min-height:100vh;overflow-x:hidden;}
@@ -517,6 +518,17 @@ html,body{font-family:'Space Grotesk',sans-serif;background:#080808;color:#FFFFF
 </div>
 
 </div><!-- /mc -->
+
+<!-- AUTH REQUIRED OVERLAY -->
+<div class="lock-overlay" id="authRequiredOverlay" style="display:none;">
+  <div class="lock-box">
+    <div class="lock-icon">🔐</div>
+    <div class="lock-title">Connexion requise</div>
+    <div class="lock-sub">Vous devez créer un compte et vous connecter avant d'effectuer une transaction sur SwiftX.</div>
+    <button class="lock-btn" onclick="hideAuthRequired();openAuth('register')">🚀 Créer un compte gratuit</button>
+    <button class="lock-btn2" onclick="hideAuthRequired();openAuth('login')">J'ai déjà un compte — Me connecter</button>
+  </div>
+</div>
 
 <!-- BOTTOM NAV -->
 <div class="bnav">
